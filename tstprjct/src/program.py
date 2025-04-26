@@ -1,5 +1,6 @@
 #type hints
 import random
+from dataclasses import dataclass
 from typing import Optional, Any, List, Iterable, Generator
 
 
@@ -59,3 +60,25 @@ def rnd_stream(min_val: int, max_val: int) -> Generator[int]:
 lol = rnd_stream(1, 100)
 
 print(next(lol))
+
+#dataclasses
+
+class Question:
+    def __init__(self, question: str, is_true: bool, explanation: str):
+        self.explanation = explanation
+        self.is_true = is_true
+        self.question = question
+
+#But with usage dataclass we can write it like that:
+
+@dataclass #will save us from boilerplate
+class Answer:
+    text: str
+    is_true: bool
+    explanation: str
+
+a = Answer('test', True, 'because')
+print(a.text)
+
+#@dataclass(frozen) we can set diff props of dataclass, for example frozen
+
