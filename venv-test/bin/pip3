@@ -1,4 +1,4 @@
-#!/Users/stanislavkadyrov/Documents/python/venv-test/bin/python
+#!/Users/ruakdsm/Documents/projects/pyth/venv-test/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
